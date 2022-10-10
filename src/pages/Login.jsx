@@ -39,7 +39,7 @@ const Login = () => {
                     <Form.Control
                         {...register("email")}
                         type="email"
-                        placeholder="Enter email"
+                        placeholder="romano@gmail.com"
                     />
                     <Form.Text className="text-muted">
                         We'll never share your email with anyone else.
@@ -51,7 +51,7 @@ const Login = () => {
                     <Form.Control
                         {...register("password")}
                         type="password"
-                        placeholder="Password" />
+                        placeholder="roof1234" />
                 </Form.Group>
 
                 <Button variant="primary" type="submit">

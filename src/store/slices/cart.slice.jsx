@@ -21,10 +21,10 @@ export const getCartThunk = () => (dispatch) => {
         .finally(() => dispatch(setIsLoading(false)))
 }
 
-export const addCartThunk = (favorite) => (dispatch) => {
+export const addCartThunk = (add) => (dispatch) => {
     dispatch(setIsLoading(true))
     return axios
-        .post("https://ecommerce-api-react.herokuapp.com/api/v1/cart", favorite, getConfig())
+        .post("https://ecommerce-api-react.herokuapp.com/api/v1/cart", add, getConfig())
         .then(res => dispatch(getCartThunk(res.data.data?.cart.products)))
         .catch(error => console.log(error.response))
         .finally(() => dispatch(setIsLoading(false)))

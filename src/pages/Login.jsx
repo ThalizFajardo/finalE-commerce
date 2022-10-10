@@ -38,7 +38,7 @@ const Login = () => {
                     <Form.Label>Email address</Form.Label>
                     <Form.Control
                         {...register("email")}
-                            type="email"
+                        type="email"
                         placeholder="Enter email"
                     />
                     <Form.Text className="text-muted">
@@ -58,6 +58,11 @@ const Login = () => {
                     Submit
                 </Button>
             </Form>
+            
+            <div className='warning-login'>
+                <p>* if you are not logged in, you will not be able to see the section of your purchases</p>
+            </div>
+
 
         </div >
 

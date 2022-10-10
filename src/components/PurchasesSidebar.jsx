@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCartThunk } from '../store/slices/cart.slice';
+import { getCartThunk, setCart } from '../store/slices/cart.slice';
 import { purchaseCartThunk } from '../store/slices/cart.slice';
 
 import { Button, ListGroup, ListGroupItem, Offcanvas } from 'react-bootstrap';
@@ -16,7 +16,9 @@ const PurchasesSidebar = ({ show, handleClose }) => {
         dispatch(getCartThunk());
     }, []);
 
-
+    const check = () => {
+        dispatch(purchaseCartThunk(setCart([])))
+    }
 
 
     return (
@@ -37,7 +39,7 @@ const PurchasesSidebar = ({ show, handleClose }) => {
                 </ListGroup>
             </Offcanvas.Body>
 
-            <Button onClick={() => dispatch(purchaseCartThunk())}>Cheackout</Button>
+            <Button onClick={check}>Cheackout</Button>
 
         </Offcanvas>
 

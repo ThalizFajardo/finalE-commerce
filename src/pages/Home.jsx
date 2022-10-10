@@ -73,10 +73,10 @@ const Home = () => {
                                 onClick={() => navigate(`/products/${product.id}`)}
                                 style={{ height: "100%" }}
                             >
-                                <Card.Img variant="top"  src={product?.productImgs} width={"10px"} />
+                                <Card.Img variant="top"  src={product?.productImgs[1]} width={"10px"} />
                                 <Card.Body>
                                     <Card.Title>{product.title}</Card.Title>
-                                    <Card.Text>{product.price}</Card.Text>
+                                    <Card.Text>Pricce: {product.price}</Card.Text>
                                 </Card.Body>
                             </Card>
                         </Col>
